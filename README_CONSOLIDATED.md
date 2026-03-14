@@ -25,20 +25,36 @@ cd staging
 npm install
 ```
 
-### Step 4: Start the Infrastructure
+### Step 4: Setup Environment Variables
+Because environment variables contain sensitive information, they are not stored in the repository. You must create them from the provided examples.
+Run these commands to set up your `.env` files:
+
+**For Windows (Command Prompt):**
+```cmd
+copy .env.example .env
+copy packages\auth-bff\.env.example packages\auth-bff\.env
+```
+
+**For Mac/Linux/PowerShell:**
+```bash
+cp .env.example .env
+cp packages/auth-bff/.env.example packages/auth-bff/.env
+```
+
+### Step 5: Start the Infrastructure
 You must have **Docker Desktop** running on your computer first! Open Docker Desktop, wait for it to fully start, and then run:
 ```bash
 npm run docker:up
 ```
 
-### Step 5: Setup the Database
+### Step 6: Setup the Database
 Run these two commands one after the other:
 ```bash
 npm run db:migrate
 npm run db:seed
 ```
 
-### Step 6: Start the Backend API
+### Step 7: Start the Backend API
 Run these commands to start the backend server:
 ```bash
 cd packages/auth-bff
@@ -46,7 +62,7 @@ npm run dev
 ```
 🛑 **LEAVE THIS TERMINAL WINDOW OPEN AND RUNNING.** Do not close it. 🛑
 
-### Step 7: Start the Frontend UI
+### Step 8: Start the Frontend UI
 Open a **BRAND NEW** terminal window. Navigate to the folder where you cloned the repo (`cd staging`). Then run:
 ```bash
 cd packages/login-ui
