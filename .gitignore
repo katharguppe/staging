@@ -38,7 +38,6 @@ coverage/
 .nyc_output/
 
 # Prisma
-packages/auth-bff/prisma/migrations/*_*
 !packages/auth-bff/prisma/migrations/migration_lock.toml
 
 # Keys (never commit actual keys)
