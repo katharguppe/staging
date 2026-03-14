@@ -25,20 +25,22 @@ cd staging
 npm install
 ```
 
-### Step 4: Setup Environment Variables
-Because environment variables contain sensitive information, they are not stored in the repository. You must create them from the provided examples.
-Run these commands to set up your `.env` files:
+### Step 4: Setup Environment Variables and Keys
+Because environment variables and cryptographic keys contain sensitive information, they are not stored in the repository. You must create them from the provided examples.
+Run these commands to set up your `.env` files and generate RSA keys:
 
 **For Windows (Command Prompt):**
 ```cmd
 copy .env.example .env
 copy packages\auth-bff\.env.example packages\auth-bff\.env
+npm run setup:keys
 ```
 
 **For Mac/Linux/PowerShell:**
 ```bash
 cp .env.example .env
 cp packages/auth-bff/.env.example packages/auth-bff/.env
+npm run setup:keys
 ```
 
 ### Step 5: Start the Infrastructure

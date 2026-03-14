@@ -7,6 +7,7 @@
     "packages/*"
   ],
   "scripts": {
+    "setup:keys": "node scripts/generate-keys.js",
     "dev": "npm run dev --workspace=packages/auth-bff",
     "dev:ui": "npm run dev --workspace=packages/login-ui",
     "build": "npm run build --workspaces",
